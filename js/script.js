@@ -4,19 +4,21 @@ function loadHTML(elementId, file) {
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
 
-            // Réactiver le burger APRÈS chargement du header
-            const burger = document.getElementById("burger");
-            const navLinks = document.getElementById("nav-links");
-
-            if (burger && navLinks) {
-                burger.addEventListener("click", () => {
-                    navLinks.classList.toggle("active");
-                });
-            }
         });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     loadHTML("header-container", "header.html");
     loadHTML("footer-container", "footer.html");
+});
+
+/* EVENT DELEGATION — BURGER */
+document.addEventListener("click", (e) => {
+    const burger = e.target.closest("#burger");
+    if (!burger) return;
+
+    const navLinks = document.getElementById("nav-links");
+    if (!navLinks) return;
+
+    navLinks.classList.toggle("active");
 });
