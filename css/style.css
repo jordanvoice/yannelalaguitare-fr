@@ -1,0 +1,327 @@
+:root {
+    --dark: #0d0d0d;
+    --light: #f5f5f5;
+    --accent: #ff2f92; /* rose pop-punk */
+}
+
+h1, h2, h3 {
+    font-family: "Rubik Microbe", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section h2::after {
+    width: 80px;
+}
+
+section {
+    padding: 1rem;
+}
+
+p {
+    margin-top: 0.5rem;
+}
+
+nav a:hover {
+    background-color: var(--accent);
+    color: black;
+}
+
+button,
+.btn-download {
+    transition: background-color 0.3s ease;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light);
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: var(--dark);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--dark);
+}
+
+nav a:hover {
+    background-color: #444;
+}
+
+/* Contenu principal */
+main {
+    padding: 2rem;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+/* NAVBAR */
+.navbar {
+    background-color: var(--dark);
+    position: relative;
+}
+
+/* Bouton burger */
+.burger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* Menu desktop */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--dark);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-links a {
+        border-top: 1px solid #444;
+    }
+}
+
+/* CONTACT */
+.contact-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    background-color: var(--dark);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
+/* PROS */
+.pros-intro,
+.pros-prestations,
+.pros-medias,
+.pros-infos {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.pros-prestations ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.pros-prestations li {
+    margin-bottom: 0.5rem;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.media-item {
+    background-color: #ddd;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.media-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Vidéo responsive */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.btn-download {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--dark);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-download:hover {
+    background-color: #444;
+}
+/* RIDER TECH */
+.pros-tech {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.pros-tech ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pros-tech li {
+    margin-bottom: 0.3rem;
+}
+/* HERO BANNER */
+.hero {
+    background-image: url("../assets/images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Overlay sombre pour lisibilité */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--accent);
+}
