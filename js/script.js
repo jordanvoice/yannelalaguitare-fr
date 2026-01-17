@@ -21,4 +21,5 @@ document.addEventListener("click", (e) => {
     if (!navLinks) return;
 
     navLinks.classList.toggle("active");
+    burger.classList.toggle("open");
 });
