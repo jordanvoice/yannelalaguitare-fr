@@ -105,7 +105,12 @@ footer {
 /* NAVBAR */
 .navbar {
     background-color: var(--dark);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+}
 }
 
 /* Bouton burger */
@@ -324,4 +329,21 @@ footer {
     margin-top: 0.5rem;
     font-weight: bold;
     color: var(--accent);
+}
+
+/* ENFERMER CANVA */
+.canva-wrapper {
+    position: relative;
+    z-index: 0;
+    isolation: isolate;
+}
+
+@media (max-width: 768px) {
+    .canva-wrapper {
+        pointer-events: none;
+    }
+
+    .canva-wrapper iframe {
+        pointer-events: auto;
+    }
 }
