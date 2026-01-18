@@ -21,7 +21,11 @@
         <section class="contact-section">
             <h2>Me contacter</h2>
          
-            <form action="https://formspree.io/f/mzddekrb" method="POST">
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/mzddekrb"
+              method="POST"
+            >
                 <label for="name">Nom</label>
                 <input type="text" id="name" name="name" required>
 
@@ -32,6 +36,12 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Envoyer</button>
+
+                <!-- Options Formspree (invisibles, n'affectent PAS le style) -->
+                <input type="hidden" name="_subject" value="Message depuis yannelalaguitare.fr">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://www.yannelalaguitare.fr/merci.html">
+
             </form>
 
         </section>
